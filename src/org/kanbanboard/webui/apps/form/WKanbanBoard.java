@@ -125,7 +125,7 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 
 	protected final static String PROCESS_ID_KEY = "processId";
 
-	private CustomForm kForm = new CustomForm();;	
+	private CustomForm kForm = new CustomForm();
 
 	private Borderlayout	mainLayout	= new Borderlayout();
 

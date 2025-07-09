@@ -84,7 +84,7 @@ import org.zkoss.zul.Separator;
 
 public class WKanbanStatus extends KanbanStatus implements IFormController, EventListener<Event>, ValueChangeListener {
 
-	private CustomForm kForm = new CustomForm();;	
+	private CustomForm kForm = new CustomForm();
 
 	private Borderlayout	mainLayout	= new Borderlayout();
 
