@@ -1,23 +1,23 @@
-# kdb_idempiere
+Kanban Board in iDempiere
+=================
 
-Repositorio público del perfil **Carl0gonzalez**, documentado para dejar un punto de entrada más claro sobre su propósito y contenido.
+Description
+-----------
+* [Video guide](http://www.youtube.com/watch?v=1CExXqfpPeE)
+* [Red1's review](http://youtu.be/Rt1aLdrfN3Y)
 
----
+Features
+--------
+- Copyright: 
+    2014 Diego Ruiz
+- License: GPLv2
+- Language: Java
+- IDE: Eclipse
 
-## 📌 Objetivo
+Documentation
+-------------
+- [How to configure](http://wiki.idempiere.org/en/Plugin:_Kanban_Dashboard)
 
-Entregar una descripción breve y útil del repositorio para facilitar su revisión y mantenimiento.
-
-## 📁 Revisión recomendada
-
-Clona el repositorio y revisa su estructura interna para identificar el flujo técnico, académico o experimental correspondiente.
-
-```bash
-git clone git@github.com:Carl0gonzalez/kdb_idempiere.git
-cd kdb_idempiere
-```
-
-## 👤 Autor
-
-**Carlo González**
-
+Questions or feedback
+-------------
+- Feel free to ask and comment in the iDempiere [forum](https://groups.google.com/forum/#!forum/idempiere)
