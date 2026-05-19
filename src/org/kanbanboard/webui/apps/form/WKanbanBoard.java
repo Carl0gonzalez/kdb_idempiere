@@ -39,6 +39,7 @@ import org.adempiere.webui.apps.BusyDialog;
 import org.adempiere.webui.apps.ProcessModalDialog;
 import org.adempiere.webui.apps.WProcessCtl;
 import org.adempiere.webui.component.Button;
+import org.adempiere.webui.component.FlexHlayout;
 import org.adempiere.webui.component.Grid;
 import org.adempiere.webui.component.Label;
 import org.adempiere.webui.component.ListItem;
@@ -97,7 +98,6 @@ import org.zkoss.zul.Cell;
 import org.zkoss.zul.Column;
 import org.zkoss.zul.Columns;
 import org.zkoss.zul.Div;
-import org.zkoss.zul.Hbox;
 import org.zkoss.zul.Hlayout;
 import org.zkoss.zul.Html;
 import org.zkoss.zul.Menuitem;
@@ -138,7 +138,7 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 	private Timer timer;
 	private Menupopup menupopup;
 	private Menupopup cardpopup;
-	private Hbox      northPanelHbox;
+	private FlexHlayout      northPanelHbox;
 	
 	//Process Functionality
 	private Div boardButtonsDiv;
@@ -202,7 +202,7 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 		bRefresh.setHeight("70%");
 		bRefresh.addEventListener(Events.ON_CLICK, this);
 
-		northPanelHbox = new Hbox();
+		northPanelHbox = new FlexHlayout();
 		northPanelHbox.setAlign("center");
 		northPanelHbox.appendChild(lProcess);
 		kanbanListbox.setHeight("70%");
@@ -396,7 +396,7 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 			editor.getLabel().setHflex("1");
 			editor.getLabel().setStyle("text-align: right;");
             if (m_sEditorsTo.get(i) != null) {
-            	Hbox toParams = new Hbox();
+            	FlexHlayout toParams = new FlexHlayout();
             	toParams.appendChild(editor.getComponent());
             	toParams.appendChild(new Label(" - "));
             	toParams.appendChild(m_sEditorsTo.get(i).getComponent());
