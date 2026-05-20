@@ -82,7 +82,6 @@ import org.kanbanboard.model.MKanbanCard;
 import org.kanbanboard.model.MKanbanParameter;
 import org.kanbanboard.model.MKanbanStatus;
 import org.kanbanboard.model.MKanbanSwimlaneConfiguration;
-import org.zkoss.zhtml.Span;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.HtmlBasedComponent;
 import org.zkoss.zk.ui.Page;
@@ -138,7 +137,7 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 	private Timer timer;
 	private Menupopup menupopup;
 	private Menupopup cardpopup;
-	private FlexHlayout      northPanelHbox;
+	private Div northPanelHbox;
 	
 	//Process Functionality
 	private Div boardButtonsDiv;
@@ -202,14 +201,14 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 		bRefresh.setHeight("70%");
 		bRefresh.addEventListener(Events.ON_CLICK, this);
 
-		northPanelHbox = new FlexHlayout();
-		northPanelHbox.setAlign("center");
+		northPanelHbox = new Div();
+		northPanelHbox.setStyle("display: flex; flex-direction: row; align-items: center; width: 100%; height: 100%;");
 		northPanelHbox.appendChild(lProcess);
 		kanbanListbox.setHeight("70%");
 		northPanelHbox.appendChild(kanbanListbox);
 		northPanelHbox.appendChild(bRefresh);
 		panel.setHeight("100%");
-		northPanelHbox.setHeight("100%");
+		panel.setWidth("100%");
 		panel.appendChild(northPanelHbox);
 
 		North north = new North();
@@ -557,8 +556,8 @@ public class WKanbanBoard extends KanbanBoard implements IFormController, EventL
 			}
 			swimlaneListbox.addEventListener(Events.ON_SELECT, this);
 			
-			Span swimlaneDiv = new Span();
-			swimlaneDiv.setStyle("position: absolute; right: 0;top: 50%;transform: translate(0, -50%);");
+			Div swimlaneDiv = new Div();
+			swimlaneDiv.setStyle("margin-left: auto; display: flex; align-items: center;");
 			Label label = new Label(Msg.getCleanMsg(Env.getCtx(), "GroupedBy"));
 			label.setStyle("padding:3px;");
 			swimlaneDiv.appendChild(label);
